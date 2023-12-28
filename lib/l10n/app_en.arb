@@ -1,0 +1,18 @@
+{
+    
+
+    "language" :"English",
+    "@language" :{
+        "description":"The current Language"
+    },
+    "helloWorld" :"Hello World!",
+    "@helloWorld" : {
+        "description": "a programmer greeting"
+    },
+    "multiLanguage" :"Multi Language",
+    "@multiLanguage" :{
+        "description" :"App title"
+    }
+
+
+}
