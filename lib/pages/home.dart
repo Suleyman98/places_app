@@ -17,6 +17,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        centerTitle: false,
         bottom: const PreferredSize(
             preferredSize: Size(30, 30),
             child: Align(
@@ -26,18 +27,18 @@ class _HomePageState extends State<HomePage> {
                 child: Text(
                   'Explore the world',
                   textAlign: TextAlign.left,
-                  style: TextStyle(color: Colors.black45, fontSize: 26),
+                  style: TextStyle(color: Colors.black45, fontSize: 20  ),
                 ),
               ),
             )),
         elevation: 0,
         backgroundColor: Colors.white,
-        title: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: const Text(
+        title: const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text(
             'Hi, David 👋',
             style: TextStyle(
-                color: Colors.black, fontSize: 30, fontWeight: FontWeight.bold),
+                color: Colors.black, fontSize: 25, fontWeight: FontWeight.bold),
           ),
         ),
         actions: [

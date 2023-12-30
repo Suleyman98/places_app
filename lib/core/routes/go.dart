@@ -1,6 +1,4 @@
-import 'dart:developer';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class GO {
@@ -12,6 +10,7 @@ class GO {
     return await key.currentState?.pushNamed(
       routeName,
       arguments: arguments,
+      
     );
   }
 

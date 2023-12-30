@@ -19,12 +19,12 @@ class CustomSearchDelegate extends SearchDelegate {
   @override
   Widget buildResults(BuildContext context) {
     
-    return const Text('Hello');
+    return const Text('Hedssdllo');
   }
 
   @override
   Widget buildSuggestions(BuildContext context) {
      
-    return Text('Hello');
+    return const Text('Hrew');
   }
 }

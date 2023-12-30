@@ -1,7 +1,9 @@
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:new_flutter/main.dart';
 import 'package:new_flutter/pages/home.dart';
+import 'package:new_flutter/pages/home_detail.dart';
 
 class RouteGenerator {
   RouteGenerator._();
@@ -9,14 +11,16 @@ class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     final Map<String, dynamic Function(dynamic)> routes = {
       '/': (id) => route(const HomePage(),
-          arguments: id as String, defaultAnimation: false, fromRtl: true),
-      '/detail': (p0) =>
-          route(const HomePage(), defaultAnimation: false, fromRtl: false)
+          arguments: id as String, defaultAnimation: false, fromRtl: true,),
+      '/detail': (id) {
+        
+        return route( const HomeDetail(), defaultAnimation: true, fromRtl: false,arguments: id);
+      }
     };
 
-    final dynamic Function(dynamic)? pageBuilder = routes[settings.name];
+    final dynamic Function(dynamic args)? pageBuilder = routes[settings.name];
     if (pageBuilder != null) {
-      return pageBuilder(settings.name);
+      return pageBuilder(settings.arguments);
     } else {
       return CupertinoPageRoute(builder: (context) {
         return const Scaffold(
